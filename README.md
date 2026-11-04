@@ -1,4 +1,4 @@
-# Hi, I'm Kate 👋
+# Hi, I'm Ekaterina 👋
 
 **Data Scientist / Data Analyst** based in the New York area | 10+ years in accounting, including the UN (UNDP)
 
