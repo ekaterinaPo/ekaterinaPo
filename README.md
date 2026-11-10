@@ -8,13 +8,14 @@ I build machine learning models and deploy them to production on AWS. I also rea
 
 | | |
 |---|---|
-| **Languages** | Python · SQL (CTEs, window functions) · Scala |
+| **Languages** | Python · SQL (CTEs, joins, aggregation, window functions) · Scala |
 | **ML & Deep Learning** | Scikit-Learn · XGBoost · PyTorch · TensorFlow · CNN / U-Net · RNN · Transformers |
-| **Data & Statistics** | Pandas · Spark · SciPy · statsmodels · hypothesis testing · time series (Prophet, ARIMA) |
+| **Data & Statistics** | Pandas · Spark · SciPy · statsmodels · descriptive statistics · hypothesis testing (z-test, t-test, ANOVA, non-parametric) · time series (Prophet, ARIMA) |
 | **LLM & Agents** | LangGraph · Claude API · Text-to-SQL agents · token-cost profiling |
-| **Cloud & MLOps** | AWS (SageMaker, Lambda, S3, EventBridge, EC2, ECR) · Docker · GitHub Actions · Apache Airflow |
+| **Cloud & MLOps** | AWS (SageMaker, Lambda, S3, EventBridge, EC2, ECR) · Docker · Git / GitHub · GitHub Actions · Apache Airflow |
 | **Apps & APIs** | FastAPI · Flask · Streamlit |
-| **BI & Visualization** | Power BI · Tableau · Plotly · Matplotlib · Seaborn · Advanced Excel |
+| **BI & Data Modeling** | Power BI · Tableau · DAX · Power Query (M) · data modeling (star schema) · Advanced Excel |
+| **Visualization** | Plotly · Matplotlib · Seaborn |
 
 ## 📊 Featured Projects
 
@@ -22,6 +23,11 @@ I build machine learning models and deploy them to production on AWS. I also rea
 A LangGraph agent that answers plain-English policy questions over UN Sustainable Development Goals data (193 countries, 123 indicators, 293K data points). It inspects the schema, writes its own SQL, checks the result and retries when needed. Every question, query, answer and token cost is logged. I worked inside the UN system at UNDP before moving into data, so this one is personal.
 
 📌 Cut cost per question from $0.39 to $0.06-0.13 (up to 85% lower) by profiling agent runs. The number of agent turns, not schema size, drove cost; a local entity resolver and a cached schema removed the wasted turns.
+
+### [Superstore Sales Performance](https://github.com/ekaterinaPo/superstore-sales-dashboard) - Power BI · DAX · Power Query · Python
+Two Power BI dashboards on four years of retail sales: a 6-page analytical dashboard (discounts, products, customers, regions) and a 1-page management dashboard with a next-year forecast. Star schema data model, 125+ DAX measures, Python EDA.
+
+📌 Found that discounts above 20% lose money on 97% of sales and cost $135K, almost a third of potential profit. Recommended a 20% discount cap, starting with a test in Texas.
 
 ### [LandCover Segmentation](https://github.com/ekaterinaPo/LandCover) - PyTorch · AWS Lambda · S3 · Docker · GitHub Actions
 Multi-class semantic segmentation of satellite images with a U-Net model, built to help agricultural companies assess farmland suitability. Deployed on AWS Lambda with three serving paths: automated S3-triggered batch, a Streamlit UI and a FastAPI REST API.
@@ -47,9 +53,9 @@ A daily Airflow DAG pulls Twitter mentions of three Canadian airlines, classifie
 📌 [Bank Marketing in Scala](https://github.com/ekaterinaPo/BankMarketing-MLinScala) - logistic regression, SVM, gradient-boosted trees and random forest in Scala to predict telemarketing success (University of Toronto course project).
 
 ## 💼 Before Data: 10+ Years in Accounting
+- **Taxology CPA, Ontario** - Accountant & Bookkeeper: full-cycle bookkeeping and tax for a multi-client portfolio; built consolidated reporting for two projects totaling about $7M.
 - **UNDP, Minsk** - Finance Clerk: payments, financial reports and cost-recovery billing for UN agencies; processed 100+ payments a day within 3-day deadlines.
 - **Sporting Club LLC, Minsk** - Accountant: automated quarterly reporting in Excel (8 hours → 15 minutes); developed an accounting method for restaurants that the Ministry of Trade of Belarus adopted as a countrywide standard.
-- **Taxology CPA, Ontario** - Accountant & Bookkeeper: full-cycle bookkeeping and tax for a multi-client portfolio; built consolidated reporting for two projects totaling about $7M.
 
 This is why I ask "does this number make sense?" before "how accurate is the model?"
 
